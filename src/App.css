@@ -1,0 +1,114 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+.swiper-initialized {
+  padding: 10px;
+}
+.group:hover .rotate-y-90 {
+  transform: rotateY(180deg) translateX(40px);
+  transition-duration: 500ms;
+}
+.group:hover .rotate-y-180 {
+  transform: rotateY(-180deg) translateX(-40px);
+  transition-duration: 500ms;
+}
+.gradient {
+  background: rgb(9, 210, 228);
+  background: linear-gradient(
+    34deg,
+    rgba(9, 210, 228, 1) 38%,
+    rgba(0, 232, 194, 1) 100%
+  );
+}
+
+@keyframes example {
+  0% {
+    width: 60px;
+    height: 60px;
+    opacity: 100;
+    transform: translateX(0px) translateY(0px);
+  }
+
+  25% {
+    width: 60px;
+    height: 60px;
+    opacity: 100;
+    transform: translateX(0px) translateY(0px);
+  }
+  45% {
+    width: 60px;
+    height: 60px;
+    opacity: 100;
+    transform: translateX(0px) translateY(0px);
+  }
+  60% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    transform: translateX(25px) translateY(50px);
+  }
+  75% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    transform: translateX(25px) translateY(50px);
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    transform: translateX(25px) translateY(50px);
+  }
+}
+.anime1 {
+  animation: example 1.6s linear 5s infinite alternate;
+  animation-delay: 1s;
+}
+.anime2 {
+  animation: example 1.6s linear 5s infinite alternate;
+  animation-delay: 2s;
+}
+.anime3 {
+  animation: example 1.6s linear 5s infinite alternate;
+  animation-delay: 3s;
+}
+
+@keyframes show {
+  0% {
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 232, 194, 1) 100%;
+  }
+  50% {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(0, 232, 194, 1) 100%;
+  }
+  100% {
+    opacity: 0;
+    background-color: rgb(18, 130, 111);
+  }
+}
+.show {
+  animation: show 0.5s ease-in-out;
+}
+.show1 {
+  animation: show 1s ease-in-out;
+}
+.show2 {
+  animation: show 1.5s ease-in-out;
+}
+.show3 {
+  animation: show 2s ease-in-out;
+}
+.show4 {
+  animation: show 2.5s ease-in-out;
+}
+
+.swiper-button-prev {
+  color: white !important;
+}
+.swiper-button-next {
+  color: white !important;
+}

@@ -1,0 +1,16 @@
+.bm-menu-wrap{
+    width: 100%!important;
+    height: 100vh!important;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+}
+#react-burger-menu-btn{
+   display: none;
+}
+.bm-burger-bars{
+    display: none;
+}
+.bm-overlay{
+    display: none;
+} 
