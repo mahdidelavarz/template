@@ -2,6 +2,7 @@ import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
+import Particle from "../components/Particle";
 function MainHeader() {
   const { t } = useTranslation();
   const handleType = (count) => {
@@ -12,7 +13,11 @@ function MainHeader() {
     console.log(`Done after 5 loops!`);
   };
   return (
-    <section className="w-full lg:h-[90vh] flex lg:items-center  mt-40 container flex-col lg:flex-row gap-6" dir={i18n.language === 'fa' ? 'rtl' : 'ltr'}>
+    <section
+      className="w-full lg:h-[90vh] flex lg:items-center  mt-40 container flex-col lg:flex-row gap-6"
+      dir={i18n.language === "fa" ? "rtl" : "ltr"}
+    >
+      <Particle />
       <div className="w-full lg:w-1/2 h-auto lg:h-full flex justify-center items-center">
         <img
           className="object-cover"
