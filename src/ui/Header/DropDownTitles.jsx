@@ -6,7 +6,7 @@ const DropdownTitles = ({ dropDownProps }) => {
    setDropDownInItems(prop.content)
     };
   return (
-    <div className="h-[75vh] hidden peer-hover:flex hover:flex w-full bg-gray-100 drop-shadow-lg absolute top-40 left-0 border-t max-w-[1450px] px-14 py-6 z-70">
+    <div className="h-[75vh] hidden peer-hover:flex hover:flex w-full bg-gray-100 drop-shadow-lg absolute top-40 left-20 border-t max-w-[1450px] px-14 py-6 z-70">
       <div className="w-[20rem] h-auto flex flex-col gap-4 border-r border-slate-400 items-start z-70">
         {dropDownProps.map((prop , index) => {
           return (
