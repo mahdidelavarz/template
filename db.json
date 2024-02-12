@@ -18,7 +18,35 @@
     {
       "id": "1",
       "img": "test.jpg",
-      "order": "1"
+      "order": "1",
+      "logo": "test svg",
+      "projectLink": "www.test.com",
+      "title": {
+        "en": "test title",
+        "fa": "متن تستی"
+      },
+      "description": {
+        "fa": "متن تستی",
+        "en": "test description"
+      }
+    }
+  ],
+  "CustomerSatisfaction": [
+    {
+      "id": "1",
+      "profileImg": "test.jpg",
+      "name": {
+        "en": "test name",
+        "fa": "متن تستی"
+      },
+      "detail": {
+        "en": "test detail",
+        "fa": "متن تستی"
+      },
+      "description": {
+        "en": "test description",
+        "fa": "متن تستی"
+      }
     }
   ]
 }
