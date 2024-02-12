@@ -14,11 +14,11 @@
       }
     }
   ],
-  "projects":[
+  "projects": [
     {
-      "id" : "1",
-      
+      "id": "1",
+      "img": "test.jpg",
+      "order": "1"
     }
   ]
-
 }
