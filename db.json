@@ -2,7 +2,62 @@
   "blogs": [
     {
       "id": "1",
-      "img": "test.jpg",
+      "title": {
+        "en": "test title",
+        "fa": "متن تستی"
+      },
+      "img": "./How-to-Become-a-Freelancer-from-Scratch.png",
+      "buildDate": "1402/2/2",
+      "writer": {
+        "fa": "مهدی",
+        "en": "mahdi"
+      },
+      "description": {
+        "fa": "متن تستی",
+        "en": "test description"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "test title",
+        "fa": "متن تستی"
+      },
+      "img": "./How-to-Become-a-Freelancer-from-Scratch.png",
+      "buildDate": "1402/2/2",
+      "writer": {
+        "fa": "مهدی",
+        "en": "mahdi"
+      },
+      "description": {
+        "fa": "متن تستی",
+        "en": "test description"
+      }
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "test title",
+        "fa": "متن تستی"
+      },
+      "img": "./How-to-Become-a-Freelancer-from-Scratch.png",
+      "buildDate": "1402/2/2",
+      "writer": {
+        "fa": "مهدی",
+        "en": "mahdi"
+      },
+      "description": {
+        "fa": "متن تستی",
+        "en": "test description"
+      }
+    },
+    {
+      "id": "4",
+      "title": {
+        "en": "test title",
+        "fa": "متن تستی"
+      },
+      "img": "./How-to-Become-a-Freelancer-from-Scratch.png",
       "buildDate": "1402/2/2",
       "writer": {
         "fa": "مهدی",
@@ -34,6 +89,86 @@
   "CustomerSatisfaction": [
     {
       "id": "1",
+      "profileImg": "test.jpg",
+      "name": {
+        "en": "test name",
+        "fa": "متن تستی"
+      },
+      "detail": {
+        "en": "test detail",
+        "fa": "متن تستی"
+      },
+      "description": {
+        "en": "test description",
+        "fa": "متن تستی"
+      }
+    },
+    {
+      "id": "2",
+      "profileImg": "test.jpg",
+      "name": {
+        "en": "test name",
+        "fa": "متن تستی"
+      },
+      "detail": {
+        "en": "test detail",
+        "fa": "متن تستی"
+      },
+      "description": {
+        "en": "test description",
+        "fa": "متن تستی"
+      }
+    },
+    {
+      "id": "3",
+      "profileImg": "test.jpg",
+      "name": {
+        "en": "test name",
+        "fa": "متن تستی"
+      },
+      "detail": {
+        "en": "test detail",
+        "fa": "متن تستی"
+      },
+      "description": {
+        "en": "test description",
+        "fa": "متن تستی"
+      }
+    },
+    {
+      "id": "4",
+      "profileImg": "test.jpg",
+      "name": {
+        "en": "test name",
+        "fa": "متن تستی"
+      },
+      "detail": {
+        "en": "test detail",
+        "fa": "متن تستی"
+      },
+      "description": {
+        "en": "test description",
+        "fa": "متن تستی"
+      }
+    },
+    {
+      "id": "5",
+      "profileImg": "test.jpg",
+      "name": {
+        "en": "test name",
+        "fa": "متن تستی"
+      },
+      "detail": {
+        "en": "test detail",
+        "fa": "متن تستی"
+      },
+      "description": {
+        "en": "test description",
+        "fa": "متن تستی"
+      }
+    },
+    {
+      "id": "6",
       "profileImg": "test.jpg",
       "name": {
         "en": "test name",

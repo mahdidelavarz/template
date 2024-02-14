@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRef, useState } from "react";
+import axios from "axios";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaChevronRight } from "react-icons/fa6";
@@ -15,6 +16,18 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 
 function CustomerSnSlider() {
   const swiperRef = useRef(null);
+  const [customers, setCustomer] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3030/CustomerSatisfaction")
+      .then((res) => {
+        setCustomer(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div className="w-full px-4 md:px-10 lg:px-40 mt-16 relative">
       <button
@@ -71,33 +84,13 @@ function CustomerSnSlider() {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="h-96 bg-slate-300"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-96 bg-slate-300"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-96 bg-slate-300"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-96 bg-slate-300"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-96 bg-slate-300"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-96 bg-slate-300"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-96 bg-slate-300"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-96 bg-slate-300"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-96 bg-slate-300"></div>
-        </SwiperSlide>
+        {customers.map((customer) => {
+          return (
+            <SwiperSlide>
+              <div className="h-96 bg-slate-300"></div>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );

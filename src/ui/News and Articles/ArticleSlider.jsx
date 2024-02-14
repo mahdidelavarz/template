@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,39 +13,14 @@ import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
 const ArticleSlider = () => {
   const { t } = useTranslation();
-  const articles = [
-    {
-      id: 1,
-      title: "this is just a test message",
-      imagePath: "./How-to-Become-a-Freelancer-from-Scratch.png",
-    },
-    {
-      id: 2,
-      title: "this is just a test message",
-      imagePath: "./How-to-Become-a-Freelancer-from-Scratch.png",
-    },
-    {
-      id: 3,
-      title: "this is just a test message",
-      imagePath: "./How-to-Become-a-Freelancer-from-Scratch.png",
-    },
-    {
-      id: 4,
-      title: "this is just a test message",
-      imagePath: "./How-to-Become-a-Freelancer-from-Scratch.png",
-    },
-  ];
-  //   const [articles, setArticles] = useState([]);
-  //   useEffect(() => {
-  //     fetch("https://thlearn.iran.liara.run/api/v1/blog/get-all?page=1")
-  //       .then((res) => {
-  //         return res.json();
-  //       })
-  //       .then((res) => {
-  //         setArticles(res.data);
-  //         console.log(res.data)
-  //       });
-  //   }, []);
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3030/blogs")
+      .then((res) => setBlogs(res.data))
+      .catch((err) => console.log(err));
+  }, []);
+
   const swiperRef = useRef(null);
   return (
     <div className="container lg:mt-10 mt-4 lg:px-24 2xl:relative">
@@ -95,12 +71,12 @@ const ArticleSlider = () => {
         }}
         modules={[Autoplay, Navigation]}
       >
-        {articles.map((item) => {
+        {blogs.map((blog) => {
           return (
             <div className="w-full py-4">
               <SwiperSlide
                 className="w-full h-auto rounded-3xl p-2"
-                key={item.title}
+                key={blog.id}
               >
                 <div
                   className="w-auto h-full bg-slate-100  shadow-md shadow-slate-300  rounded-3xl flex flex-col items-center"
@@ -108,34 +84,44 @@ const ArticleSlider = () => {
                 >
                   <div className="w-full h-full flex flex-col items-center pt-4 px-4">
                     <img
-                      src={item.imagePath}
-                      alt={item.title}
+                      src={blog.img}
+                      alt={blog.title.en}
                       className="object-cover xl:w-full xl:h-64 xl:rounded-3xl"
                     />
                     <div className="w-full flex flex-col items-start mt-4 text-second-gray-text-web">
                       <h2 className="text-slate-600 h-12 md:h-8">
-                        {item.title}
+                        {i18n.language === "fa" ? blog.title.fa : blog.title.en}
                       </h2>
                       <p className="font-Ray-Medium mt-2 h-32 md:h-28 text-sm md:text-base">
-                        {}
+                        {i18n.language === "fa"
+                          ? blog.description.fa
+                          : blog.description.en}
                       </p>
                     </div>
                     <div className="w-full h-auto flex justify-start gap-8 text-[#277f75]">
                       <div className="flex gap-2 items-center">
                         <CiUser />
                         <span className="text-sm md:text-base">
-                          Alireza Rahmani
+                          {i18n.language === "fa"
+                            ? blog.writer.fa
+                            : blog.writer.en}
                         </span>
                       </div>
                       <div className="flex gap-2 items-center">
                         <CiCalendarDate />
-                        <span className="text-sm md:text-base">1402/07/07</span>
+                        <span className="text-sm md:text-base">
+                          {blog.buildDate}
+                        </span>
                       </div>
                     </div>
                   </div>
                   <button className="w-full h-14 flex text-[#277f75] justify-center items-center gap-2 mt-2 md:mt-4 border-t border-solid   transition-all duration-300 rounded-b-2xl hover:bg-[#27c3b1] hover:text-slate-50">
                     <i className="bi bi-search"></i>
-                    <span className="font-Ray-Medium">Study The Article</span>
+                    <span className="font-Ray-Medium">
+                      {i18n.language === "en"
+                        ? "Study The Article"
+                        : "مطالعه ی مقاله"}
+                    </span>
                   </button>
                 </div>
               </SwiperSlide>
