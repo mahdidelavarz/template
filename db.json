@@ -183,5 +183,79 @@
         "fa": "متن تستی"
       }
     }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "title": {
+        "fa": "2متن تستی",
+        "en": "test title2"
+      },
+      "description": {
+        "fa": "2متن تستی",
+        "en": "test description2"
+      },
+      "icon": "testIcon"
+    },
+    {
+      "id": 2,
+      "title": {
+        "fa": "3متن تستی",
+        "en": "test title3"
+      },
+      "description": {
+        "fa": "3متن تستی",
+        "en": "test description3"
+      },
+      "icon": "testIcon"
+    },
+    {
+      "id": 3,
+      "title": {
+        "fa": "متن تستی",
+        "en": "test title"
+      },
+      "description": {
+        "fa": "متن تستی",
+        "en": "test description"
+      },
+      "icon": "testIcon"
+    },
+    {
+      "id": 4,
+      "title": {
+        "fa": "متن تستی",
+        "en": "test title"
+      },
+      "description": {
+        "fa": "متن تستی",
+        "en": "test description"
+      },
+      "icon": "testIcon"
+    },
+    {
+      "id": 5,
+      "title": {
+        "fa": "متن تستی",
+        "en": "test title"
+      },
+      "description": {
+        "fa": "متن تستی",
+        "en": "test description"
+      },
+      "icon": "testIcon"
+    },
+    {
+      "id": 6,
+      "title": {
+        "fa": "متن تستی",
+        "en": "test title"
+      },
+      "description": {
+        "fa": "متن تستی",
+        "en": "test description"
+      },
+      "icon": "testIcon"
+    }
   ]
 }
